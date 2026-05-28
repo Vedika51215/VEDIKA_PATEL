@@ -2,12 +2,13 @@
 
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Points, PointMaterial } from '@react-three/drei';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import * as THREE from 'three';
 // @ts-expect-error: maath types are missing in some setups
 import * as random from 'maath/random/dist/maath-random.esm';
 
-function Spores(props: any) {
-  const ref = useRef<any>(null);
+function Spores(props: React.ComponentPropsWithoutRef<typeof Points>) {
+  const ref = useRef<THREE.Points>(null);
   const [sphere] = useState(() => random.inSphere(new Float32Array(5001), { radius: 1.5 }) as Float32Array);
 
   useFrame((state, delta) => {
@@ -27,6 +28,19 @@ function Spores(props: any) {
 }
 
 export default function Atmosphere() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      setMounted(true);
+    });
+    return () => cancelAnimationFrame(frame);
+  }, []);
+
+  if (!mounted) {
+    return <div className="fixed inset-0 z-0 bg-[#050505] opacity-60" />;
+  }
+
   return (
     <div className="fixed inset-0 z-0 pointer-events-none opacity-60">
       <Canvas camera={{ position: [0, 0, 1] }}>

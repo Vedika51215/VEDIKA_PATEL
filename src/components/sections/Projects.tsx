@@ -19,7 +19,7 @@ const projects = [
     title: 'Portfolio',
     description: 'A cinematic, retro-futuristic personal portfolio showcasing my skills, projects, and design sensibility — built with Next.js & Three.js.',
     tags: ['Next.js', 'React', 'Three.js'],
-    link: 'https://github.com/Vedika51215/VEDIKA_PATEL'
+    link: 'https://vedika-patel-mbsi.vercel.app/'
   },
 ];
 

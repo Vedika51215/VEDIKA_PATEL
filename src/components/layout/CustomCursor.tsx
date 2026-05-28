@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 export default function CustomCursor() {
+  const [mounted, setMounted] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
 
@@ -19,6 +20,13 @@ export default function CustomCursor() {
   // Inner dot position (offset by 12px to center it in the 32x32 area)
   const innerDotX = useTransform(cursorX, (val) => val + 12);
   const innerDotY = useTransform(cursorY, (val) => val + 12);
+
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      setMounted(true);
+    });
+    return () => cancelAnimationFrame(frame);
+  }, []);
 
   useEffect(() => {
     const moveCursor = (e: MouseEvent) => {
@@ -58,6 +66,8 @@ export default function CustomCursor() {
       window.removeEventListener("mouseover", handleMouseOver);
     };
   }, [cursorX, cursorY, isVisible]);
+
+  if (!mounted) return null;
 
   // Don't render on mobile (touch screens)
   if (typeof window !== "undefined" && window.matchMedia("(hover: none)").matches) {

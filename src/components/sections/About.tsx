@@ -45,14 +45,14 @@ export default function About() {
           className="text-gray-400 text-lg leading-relaxed space-y-6"
         >
           <p>
-            I'm Vedika Patel, a Computer Engineering student with a deep interest in
+            I&apos;m Vedika Patel, a Computer Engineering student with a deep interest in
             Cyber Security and modern web development. I believe in building systems
             that are both powerful and secure.
           </p>
           <p>
             Currently exploring networking fundamentals, ethical hacking tools like
             Nmap and Wireshark, and crafting web experiences with clean code. Every day
-            I'm pushing the boundaries of what I know.
+            I&apos;m pushing the boundaries of what I know.
           </p>
         </motion.div>
       </div>

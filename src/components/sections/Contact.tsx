@@ -15,7 +15,7 @@ export default function Contact() {
             <span className="w-8 h-px bg-[#e50914]" /> Contact
           </div>
           <h2 className="text-5xl md:text-7xl font-bold leading-none tracking-tighter">
-            Let's<br />work<br />
+            Let&apos;s<br />work<br />
             <span className="text-[#e50914] italic">together.</span>
           </h2>
         </motion.div>
