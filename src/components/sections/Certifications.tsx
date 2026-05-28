@@ -8,35 +8,40 @@ const certifications = [
     year: 'Mar 2026',
     name: 'Ethical Hacking Course',
     issuer: 'Tutedude · TD-VEDI-EH-1600',
-    color: 'bg-[#e50914]'
+    color: 'bg-[#e50914]',
+    link: '/certificate/certificate_TD-VEDI-EH-1600.pdf'
   },
   {
     domain: 'AI & ML',
     year: 'Feb 2026',
     name: 'Artificial Intelligence & Machine Learning',
     issuer: 'Microsoft · FICE (20-hour course)',
-    color: 'bg-[#0891b2]'
+    color: 'bg-[#0891b2]',
+    link: '/certificate/certificate.pdf'
   },
   {
     domain: 'Azure AI',
     year: 'Apr 2026',
     name: 'Natural Language Processing with Azure AI Services (AI-3003)',
     issuer: 'Microsoft · FICE',
-    color: 'bg-[#1d4ed8]'
+    color: 'bg-[#1d4ed8]',
+    link: '/certificate/certificate (1).pdf'
   },
   {
     domain: 'Azure AI',
     year: 'Apr 2026',
     name: 'Computer Vision Solutions with Azure AI Vision',
     issuer: 'Microsoft · FICE',
-    color: 'bg-[#7c3aed]'
+    color: 'bg-[#7c3aed]',
+    link: '/certificate/certificate (2).pdf'
   },
   {
     domain: 'Generative AI',
     year: 'Apr 2026',
     name: 'Generative AI Models in Azure Machine Learning',
     issuer: 'Microsoft · FICE',
-    color: 'bg-[#0891b2]'
+    color: 'bg-[#0891b2]',
+    link: '/certificate/certificate (3).pdf'
   }
 ];
 
@@ -82,7 +87,7 @@ export default function Certifications() {
                 {cert.issuer}
               </p>
               
-              <a href="#" className="font-mono text-xs text-[#e50914] tracking-widest uppercase flex items-center gap-2 group-hover:gap-4 transition-all">
+              <a href={cert.link} download className="font-mono text-xs text-[#e50914] tracking-widest uppercase flex items-center gap-2 group-hover:gap-4 transition-all">
                 ⬇ Download Certificate
               </a>
             </motion.div>

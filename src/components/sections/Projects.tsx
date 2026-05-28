@@ -7,16 +7,19 @@ const projects = [
     title: 'NGO Management System',
     description: 'A full-stack platform to help NGOs manage volunteers, donations, and operational records efficiently — built with real-world impact in mind.',
     tags: ['HTML', 'CSS', 'JavaScript'],
+    link: 'https://github.com/Vedika51215'
   },
   {
     title: 'Cyber Security Lab',
     description: 'Hands-on exploration of networking security: Nmap scanning, Wireshark packet analysis, and web vulnerability fundamentals in a safe lab environment.',
     tags: ['Nmap', 'Wireshark', 'Python'],
+    link: 'https://github.com/Vedika51215'
   },
   {
     title: 'Portfolio',
     description: 'A cinematic, retro-futuristic personal portfolio showcasing my skills, projects, and design sensibility — built with Next.js & Three.js.',
     tags: ['Next.js', 'React', 'Three.js'],
+    link: 'https://github.com/Vedika51215/VEDIKA_PATEL'
   },
 ];
 
@@ -51,10 +54,31 @@ export default function Projects() {
             >
               <div className="absolute left-0 top-0 w-1 h-0 bg-[#e50914] transition-all duration-300 group-hover:h-full" />
               
-              <div className="font-mono text-xs text-[#e50914] tracking-widest mb-6">
-                0{i + 1} / 03
+              <div className="flex justify-between items-start mb-6">
+                <div className="font-mono text-xs text-[#e50914] tracking-widest">
+                  0{i + 1} / 03
+                </div>
+                {project.link && (
+                  <a 
+                    href={project.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-[#e50914] hover:text-white transition-colors duration-300 text-lg font-bold font-mono glitch-hover"
+                    title={`View ${project.title}`}
+                  >
+                    ↗
+                  </a>
+                )}
               </div>
-              <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
+              <h3 className="text-2xl font-bold mb-4">
+                {project.link ? (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:text-[#e50914] transition-colors duration-300">
+                    {project.title}
+                  </a>
+                ) : (
+                  project.title
+                )}
+              </h3>
               <p className="text-gray-400 text-sm leading-relaxed flex-1">
                 {project.description}
               </p>
