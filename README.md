@@ -1,4 +1,4 @@
-# 🌌 Vedika Patel | Portfolio & Cyber Lab
+# 🌌 Vedika Patel | Portfolio 
 
 ### 🔗 Live Portfolio Website: [https://vedika-patel-mbsi.vercel.app](https://vedika-patel-mbsi.vercel.app)
 
