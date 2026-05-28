@@ -59,33 +59,20 @@ The site features custom 3D particle simulations, glowing retro typography, VHS 
 
 ---
 
-## 💻 Running the Project Locally
+## 🖥️ Cyber Lab Terminal (Interactive Shell)
 
-To run the Next.js portfolio website on your local machine, follow these steps:
+The portfolio features a fully interactive **retro-styled security console** directly inside the browser. It allows visitors to explore credentials, run port audits, and interact with the host in real-time.
 
-### Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) installed (v18.x or above recommended).
-
-### Steps
-
-1.  **Clone the repository**:
-    ```bash
-    git clone https://github.com/Vedika51215/VEDIKA_PATEL.git
-    cd VEDIKA_PATEL
-    ```
-
-2.  **Install dependencies**:
-    ```bash
-    npm install
-    ```
-
-3.  **Run the development server**:
-    ```bash
-    npm run dev
-    ```
-
-4.  **Open in your browser**:
-    Navigate to [http://localhost:3000](http://localhost:3000) to view the live rendering.
+### Highlights:
+*   **CRT & Scanline Filter**: Overlay graphics simulating a real CRT monitor with glowing red text matching the *Stranger Things* theme.
+*   **Interactivity**: Supports typing operations and standard system feedback alerts.
+*   **Built-in Shell Commands**:
+    *   `help` - Lists all available commands with a quick description.
+    *   `about` - Queries the system profile for a bio of Vedika Patel.
+    *   `skills` - Outputs current programming and security skill parameters.
+    *   `certificates` - Audits verified Microsoft (Azure AI, Machine Learning) & Tutedude Ethical Hacking credentials.
+    *   `nmap` - Simulates an active security scan (SSH, HTTP, HTTPS, MSSQL, Python proxy) on localhost.
+    *   `clear` - Resets and flushes the terminal command buffer.
 
 ---
 
